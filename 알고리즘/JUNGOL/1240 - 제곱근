@@ -1,3 +1,9 @@
+/******************************
+Author : 박상범
+Language : C++
+Problem : http://www.jungol.co.kr/bbs/board.php?bo_table=pbank&wr_id=523&sca=3010
+******************************/
+
 #include <iostream>
 using namespace std;
 
