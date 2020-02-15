@@ -1,20 +1,18 @@
 #include <iostream>
 #include <algorithm>
-#include <stdio.h>
-#include <cstring>
 #include <queue>
 
-#define MAX_SIZE 25
+#define MAX_SIZE 26
 using namespace std;
 int n;
-int dx[] = {0,1,0,-1};
-int dy[] = {-1,0,1,0};
-int groups[MAX_SIZE*MAX_SIZE];
+int dx[] = {-1,1,0,0};
+int dy[] = {0,0,-1,1};
+int groups[1010];
 int group_id;
-int map[MAX_SIZE][MAX_SIZE];
-bool visited[MAX_SIZE][MAX_SIZE];
+int map[30][30];
+bool visited[30][30];
 
-int bfs(int x, int y){
+void bfs(int x, int y){
 	queue < pair<int,int> > q;
 	q.push(make_pair(x,y));
 	
@@ -42,8 +40,25 @@ int bfs(int x, int y){
 	}
 }
 
-int main(){
-	scanf("%d",&n);
+void dfs(int x, int y){
+	visited[x][y] = true;
+	groups[group_id]++;
+	
+	for(int i=0; i<4; i++){
+		int nx = x + dx[i];
+		int ny = y + dy[i];
+		
+		if(0<=nx && nx<=n && 0<=ny && ny<=n){
+			if(map[nx][ny] == 1 && visited[nx][ny] == false){
+				dfs(nx,ny);
+			}
+		}
+		
+	}
+}
+
+int main(void){
+	cin >> n;
 	
 	for(int i=0; i<n; i++){
 		for(int j=0; j<n; j++){
@@ -53,16 +68,17 @@ int main(){
 
 	for(int i=0; i<n; i++){
 		for(int j=0; j<n; j++){
-			if(map[i][j] == 1 && visited[i][j] == false){
+			if(map[i][j] && !visited[i][j]){
 				group_id++;
-				bfs(i,j);
+				dfs(i,j);
 			}
 		}
 	}
 	
-	sort(groups + 1, groups + group_id + 1);
+
 	printf("%d\n",group_id);
-	
+	sort(groups , groups + group_id);
+		
 	for(int i=1; i<=group_id; i++){
 		printf("%d\n",groups[i]);
 	}
