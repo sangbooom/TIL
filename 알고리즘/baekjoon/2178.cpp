@@ -28,7 +28,7 @@ void bfs(int x, int y){
 			if(0<=nx && nx < N && 0<=ny && ny < M){
 				if(map[nx][ny] == 1 && visited[nx][ny] == false){
 					visited[nx][ny] = true;
-					dist[nx][ny] = dist[x][y] + 1;
+					dist[nx][ny] = dist[0][0] + 1;
 					q.push(make_pair(nx,ny));
 				}
 			}
