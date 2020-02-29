@@ -28,7 +28,7 @@ void Input()
         {
             for (int j = 0; j < M; j++)
             {
-                cin >> MAP[i][j][k];        // x, y, ³ôÀÌ
+                cin >> MAP[i][j][k];        // x, y, Â³Ã´Ã€ÃŒ
                 if (MAP[i][j][k] == 0) Tomato_State = false;
                 if (MAP[i][j][k] == 1) Q.push(make_pair(make_pair(i, j), k));
             }
@@ -111,17 +111,8 @@ void Solve()
     Solution();
 }
  
-int main(void)
+int main()
 {
-    ios::sync_with_stdio(false);
-    cin.tie(NULL);
-    cout.tie(NULL);
- 
-    //freopen("Input.txt", "r", stdin);
     Solve();
- 
     return 0;
 }
-
-
-ÃâÃ³: https://yabmoons.tistory.com/29 [¾å¹®'s Coding World..]
