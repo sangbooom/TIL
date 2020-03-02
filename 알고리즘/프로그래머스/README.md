@@ -1,1 +1,1 @@
-- [Ranged-based for¹®](https://boycoding.tistory.com/210)
+- [Ranged-based for loop](https://boycoding.tistory.com/210)
