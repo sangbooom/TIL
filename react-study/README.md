@@ -1,6 +1,14 @@
-### Âü°í »çÀÌÆ®
+### ì°¸ê³  ì‚¬ì´íŠ¸
 - [velopert](https://velopert.com)
-- [react°³³ä°ú todolist Àß Á¤¸®ÇÑ »çÀÌÆ®](https://velog.io/@naseriansuzie/imcourseTIL16)
-- [°­ÀÇ Á¤¸® 1](https://byseop.netlify.com/redux-01/)
-- [°­ÀÇÁ¤¸® 2](https://kscory.com/dev/reactjs/)
-- [React °³¹ß È¯°æÀ» ±¸ÃàÇÏ¸é¼­ ¹è¿ì´Â À¥ÆÑ](https://velog.io/@jeff0720/React-%EA%B0%9C%EB%B0%9C-%ED%99%98%EA%B2%BD%EC%9D%84-%EA%B5%AC%EC%B6%95%ED%95%98%EB%A9%B4%EC%84%9C-%EB%B0%B0%EC%9A%B0%EB%8A%94-Webpack-%EA%B8%B0%EC%B4%88)
+- [reactê°œë…ê³¼ todolist ì˜ ì •ë¦¬í•œ ì‚¬ì´íŠ¸](https://velog.io/@naseriansuzie/imcourseTIL16)
+- [ê°•ì˜ì •ë¦¬ 1](https://byseop.netlify.com/redux-01/)
+- [ê°•ì˜ì •ë¦¬ 2](https://kscory.com/dev/reactjs/)
+- [React ê°œë°œ í™˜ê²½ì„ êµ¬ì¶•í•˜ë©´ì„œ ë°°ìš°ëŠ” Webpack](https://velog.io/@jeff0720/React-%EA%B0%9C%EB%B0%9C-%ED%99%98%EA%B2%BD%EC%9D%84-%EA%B5%AC%EC%B6%95%ED%95%98%EB%A9%B4%EC%84%9C-%EB%B0%B0%EC%9A%B0%EB%8A%94-Webpack-%EA%B8%B0%EC%B4%88)
+
+***
+- ë¦¬ì•¡íŠ¸ ì—†ì´ ì“°ëŠ” ë¦¬ë•ìŠ¤ 
+<p>
+<a href="https://codesandbox.io/s/pj9jonlxxm">
+    <img src="https://codesandbox.io/static/img/play-codesandbox.svg">
+</a>
+</p>
