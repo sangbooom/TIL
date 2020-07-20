@@ -21,7 +21,6 @@ int calc(int n){
 int main(){
 	int n;
 	cin >> n;
-	
 	cout << calc(n);
 	
 	return 0;

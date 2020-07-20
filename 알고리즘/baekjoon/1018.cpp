@@ -20,7 +20,7 @@ int checkChess(){
 	return min(countW,countB);
 }
 
-int getChessInfo(int x, int y){
+void getChessInfo(int x, int y){
 	for(int i=0; i<8; i++){
 		for(int j=0; j<8; j++){
 			chess[i][j] = board[i+x][j+y];
