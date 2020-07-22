@@ -22,7 +22,6 @@ int main(){
 	}
 	for(int i=1; i<10; i++){
 		sum = ( sum + d[n][i]) % 1000000000;
-		cout << d[n][i] << "\n";
 	}
 	cout << sum % 1000000000;
 	return 0;
