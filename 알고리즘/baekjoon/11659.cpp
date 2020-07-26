@@ -6,6 +6,7 @@ int sum[100001];
 
 int main(){
 	int N,M,a,b;
+	
 	ios_base::sync_with_stdio(0);
 	cin.tie(0);
 	

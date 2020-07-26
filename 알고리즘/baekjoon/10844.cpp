@@ -12,7 +12,7 @@ int main(){
 	for(int i=2; i<=n; i++){
 		for(int j=0; j<10; j++){
 			if(j==0){
-				d[i][0] = d[i-1][1];
+				d[i][0] = d[nsi-1][1];
 			} else if(j==9){
 				d[i][9] = d[i-1][8];
 			} else {

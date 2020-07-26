@@ -1,22 +1,12 @@
-#include <iostream>
-#include <string>
-using namespace std;
-int main()
-{ 
-	int n; 
-	int num= 665;
-	int count=0;
-	cin >> n;
-	
-	while(num++){
-		string s = to_string(num); //"666"
-		if(s.find("666") != -1){
-			count++;
-		}
-		if(n == count){
-			cout<< num;
-			break;
-		}
+#include <stdio.h>
+int main() {
+	int k= 2, j;
+	while(1) {
+		j = 2;
+		while( k % j != 0) j++;
+		if(k == j) printf("%d ",k);
+		if( k < 7) k++;
+		else break; 
 	}
 	return 0;
 }
