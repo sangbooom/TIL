@@ -1,29 +1,26 @@
 #include <bits/stdc++.h>
 using namespace std;
-
-int N;
-
 bool cmp(string a, string b){
-  if(a.length() == b.length()){
-       return a<b;
-  }
-  return a.length()<b.length();
+	if( a.length() == b.length()){
+		return a < b;
+	}
+	return a.length() < b.length();
 }
 
 int main(){
+	int N;
 	cin >> N;
-	string s;
-	vector<string> word; 
+	vector<string> word(N);
 	for(int i=0; i<N; i++){
-		cin >> s;
-		word.push_back(s);
+		cin >> word[i];
 	}
-	
-	sort(word.begin(),word.end(),cmp);
-	
+	sort(word.begin(), word.end(), cmp);
 	for(int i=0; i<N; i++){
+		if(i >=1 && word[i] == word[i-1]){
+			continue;
+		}
 		cout << word[i] << "\n";
 	}
-		
+	
 	return 0;
 }
