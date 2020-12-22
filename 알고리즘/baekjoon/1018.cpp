@@ -1,51 +1,69 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-char chess[8][8];
-char board[50][50];
+int N,M;
+char board[50][50] = {0,};
+string WB[8] = {"WBWBWBWB",
+				"BWBWBWBW",
+				"WBWBWBWB",
+				"BWBWBWBW",
+				"WBWBWBWB",
+				"BWBWBWBW",
+				"WBWBWBWB",
+				"BWBWBWBW"};
+				
+string BW[8] = {"BWBWBWBW",
+				"WBWBWBWB",
+				"BWBWBWBW",
+				"WBWBWBWB",
+				"BWBWBWBW",
+				"WBWBWBWB",
+				"BWBWBWBW",
+				"WBWBWBWB"};
 
-int checkChess(){
-	int countW = 0;
-	int countB = 0;
-	for(int i=0; i<8; i++){
-		for(int j=0; j<8; j++){
-			if((i+j)%2==0 && chess[i][j]=='W' || (i+j)%2==1 && chess[i][j]=='B'){
-				countW++;
+int solution(int w,int h){
+	int count_WB = 0;
+	int count_BW = 0;
+	int a=0;
+	int b=0;
+	for(int i=w; i<w+8; i++){
+		for(int j=h; j<h+8; j++){
+			if(board[i][j] != WB[a][b]){
+				count_WB++; 
 			}
-			if((i+j)%2==0 && chess[i][j]=='B' || (i+j)%2==1 && chess[i][j]=='W'){
-				countB++;
+			if(board[i][j] != BW[a][b]){
+				count_BW++;
 			}
+			b++;
 		}
-	}	
-	return min(countW,countB);
-}
-
-void getChessInfo(int x, int y){
-	for(int i=0; i<8; i++){
-		for(int j=0; j<8; j++){
-			chess[i][j] = board[i+x][j+y];
-		}
+		a++;
+		b=0;
 	}
+	
+	return min(count_WB,count_BW);
 }
 
 int main(){
-	int N,M;
+	int check_count = 0;
+	int min_count = 99999;	  
 	cin >> N >> M;
+	
 	for(int i=0; i<N; i++){
 		for(int j=0; j<M; j++){
-			cin >> board[i][j]; 
+			cin >> board[i][j];
 		}
 	}
 	
-	int min_num = 9999999;
 	for(int i=0; i<=N-8; i++){
 		for(int j=0; j<=M-8; j++){
-			getChessInfo(i,j);
-			min_num = min(min_num, checkChess());
+			check_count = solution(i,j);
+			if(check_count < min_count){
+				min_count = check_count;
+			}
 		}
 	}
 	
-	cout << min_num;
+	cout << min_count;
 	
 	return 0;
 }
