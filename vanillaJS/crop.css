@@ -1,0 +1,73 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  margin: 0;
+  box-sizing: border-box;
+}
+.photoFrame {
+  width: 500px;
+  height: 500px;
+}
+
+canvas {
+  border: 1px solid black;
+}
+
+#pictures {
+  border: 1px solid black;
+  width: 500px;
+  height: 500px;
+  display: flex;
+  position: relative;
+}
+
+.cropbox {
+  position: relative;
+  width: 200px;
+  height: 150px;
+  border: 1px solid black;
+  background-color: yellow;
+  z-index: 1;
+}
+
+.selectbox {
+  width: 20px;
+  height: 20px;
+  background-color: blue;
+}
+.cropbox:hover {
+  cursor: pointer;
+}
+
+.lt {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  z-index: 2;
+}
+.rt {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  z-index: 2;
+}
+.rb {
+  position: absolute;
+  bottom: -10px;
+  right: -10px;
+  z-index: 2;
+}
+.lb {
+  position: absolute;
+  bottom: -10px;
+  left: -10px;
+  z-index: 2;
+}
+.selectbox:hover {
+  cursor: pointer;
+}
+
+.display-none {
+  display: none;
+}
