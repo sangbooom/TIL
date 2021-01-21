@@ -64,8 +64,17 @@ canvas {
   left: -10px;
   z-index: 2;
 }
-.selectbox:hover {
-  cursor: pointer;
+.rb:hover {
+  cursor: nw-resize;
+}
+.lb:hover {
+  cursor: ne-resize;
+}
+.rt:hover {
+  cursor: ne-resize;
+}
+.lt:hover {
+  cursor: nw-resize;
 }
 
 .display-none {

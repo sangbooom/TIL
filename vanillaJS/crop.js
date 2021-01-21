@@ -29,15 +29,40 @@ window.addEventListener("load", function () {
   var current = null;
   var left = pictures.offsetLeft;
   var top = pictures.offsetTop;
+  var prevX = 0;
+  var prevY = 0;
+  var original_x = 0;
 
   document.addEventListener("mousemove", function (e) {
-    if(!dragging && !resizing) return;
+    if (dragging) {
+      var x = e.pageX - offset.x - left;
+      var y = e.pageY - offset.y - top;
 
-    var x = e.pageX - offset.x - left;
-    var y = e.pageY - offset.y - top;
-
-    current.style.left = x + "px";
-    current.style.top = y + "px";
+      current.style.left = x + "px";
+      current.style.top = y + "px";
+      
+    } else if (resizing) {
+      if (e.target.classList.contains("lt")) {
+        cropbox.style.width = cropbox.offsetWidth - (prevX - e.offsetX) + "px";
+        cropbox.style.height = cropbox.offsetHeight - (prevY - e.offsetY) + "px";
+        cropbox.style.top = cropbox.offsetTop + (prevY - e.offsetY) + "px";
+        cropbox.style.left = cropbox.offsetLeft - (prevX - e.offsetX) + "px";
+      } else if (e.target.classList.contains("rt")) {
+        cropbox.style.width = cropbox.offsetWidth + (prevX - e.offsetX) + "px";
+        cropbox.style.height = cropbox.offsetHeight - (prevY - e.offsetY) + "px";
+        cropbox.style.top = cropbox.offsetTop + (prevY - e.offsetY) + "px";
+      } else if (e.target.classList.contains("lb")) {
+        cropbox.style.width = cropbox.offsetWidth + (prevX - e.offsetX) + "px";
+        cropbox.style.height = cropbox.offsetHeight - (prevY - e.offsetY) + "px";
+        cropbox.style.left = original_x - (prevX - e.offsetX) + "px";
+        // 코드펜꺼랑 비교하면서 뭐가 다른지 보기, 코드펜껄 vscode로 옮겨서 테스트해보기
+      } else if (e.target.classList.contains("rb")) {
+        cropbox.style.width = cropbox.offsetWidth - (prevX - e.offsetX) + "px";
+        cropbox.style.height = cropbox.offsetHeight - (prevY - e.offsetY) + "px";
+      }
+    } else {
+      return;
+    }
   });
 
   document.addEventListener("mouseup", function () {
@@ -46,14 +71,20 @@ window.addEventListener("load", function () {
   });
 
   document.addEventListener("mousedown", function (e) {
+      console.log(cropbox.getBoundingClientRect())
     if (e.target.classList.contains("cropbox")) {
       dragging = true;
+      if(e.target.classList.contains("lb")){
+        original_x = cropbox.getBoundingClientRect().left;
+      }
     } else if (e.target.classList.contains("selectbox")) {
       resizing = true;
     }
     current = e.target;
     offset.x = e.offsetX;
     offset.y = e.offsetY;
+    prevX = e.offsetX;
+    prevY = e.offsetY;
 
     // cropbox.style.left = event.pageX - event.offsetX - pictures_left + "px";
     // cropbox.style.top = event.pageY - event.offsetY - pictures_top + "px";
