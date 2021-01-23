@@ -30,6 +30,7 @@ window.addEventListener("load",function(){
           noResult.classList.add("dn");
         }
       }
+
       var childElementCount = tbody.childElementCount;
 
       for(var j=0; j<childElementCount; j++){

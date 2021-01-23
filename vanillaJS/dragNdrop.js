@@ -9,13 +9,13 @@ function isBefore(element1, element2) {
       }
     }
   }
-
   return false;
 }
 
 let clicked = false;
 let hoverLi = undefined;
 let targetLi = undefined;
+
 
 function mousemove(event) {
   if (!clicked || !hoverLi) return;
@@ -55,6 +55,7 @@ function mousemove(event) {
   }
 }
 
+
 function mousedown(event) {
   if (event.button !== 0) {
     return;
@@ -93,6 +94,7 @@ function mouseup() {
   hoverLi = undefined;
   targetLi = undefined;
 }
+
 
 function mouseleave() {
   if (!clicked) {

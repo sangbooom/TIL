@@ -29,52 +29,36 @@ canvas {
   border: 1px solid black;
   background-color: yellow;
   z-index: 1;
-}
-
-.selectbox {
-  width: 20px;
-  height: 20px;
-  background-color: blue;
-}
-.cropbox:hover {
   cursor: pointer;
 }
 
-.lt {
+.selectbox {
   position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: blue;
+  z-index: 2;
+}
+
+.selectbox.lt {
   top: -10px;
   left: -10px;
-  z-index: 2;
+  cursor: nw-resize;
 }
-.rt {
-  position: absolute;
+.selectbox.rt {
   top: -10px;
   right: -10px;
-  z-index: 2;
+  cursor: ne-resize;
 }
-.rb {
-  position: absolute;
+.selectbox.rb {
   bottom: -10px;
   right: -10px;
-  z-index: 2;
+  cursor: nw-resize;
 }
-.lb {
-  position: absolute;
+.selectbox.lb {
   bottom: -10px;
   left: -10px;
-  z-index: 2;
-}
-.rb:hover {
-  cursor: nw-resize;
-}
-.lb:hover {
   cursor: ne-resize;
-}
-.rt:hover {
-  cursor: ne-resize;
-}
-.lt:hover {
-  cursor: nw-resize;
 }
 
 .display-none {
