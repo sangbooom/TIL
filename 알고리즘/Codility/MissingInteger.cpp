@@ -15,3 +15,21 @@ int solution(vector<int> &A) {
     }
     return -1;
 }
+
+//그다음날 풀이
+
+#include <bits/stdc++.h>
+int cnt[1000001];
+int solution(vector<int> &A) {
+    // vector<int> count(A.size(),0);
+    for(int i=0; i<A.size(); i++){
+        if(A[i] < 0) continue;
+        if(!cnt[A[i]]) cnt[A[i]]++;
+    }
+    
+    for(int i=1; i<100001; i++){
+        if(!cnt[i]){
+            return i;
+        }
+    }
+} 
