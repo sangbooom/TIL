@@ -1,0 +1,26 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+	int n,tmp;
+	cin >> n;
+	vector<int> A;
+	vector<int> len(n,1);
+	
+	for(int i=0; i<n; i++){
+		cin >> tmp;
+		A.push_back(tmp); 
+	}
+	
+	for(int i=n-2; i>=0; i--){
+		for(int j=n-1; j>i; j--){
+			if(A[i] > A[j] && len[j]+1 > len[i]){
+				len[i] = len[j] + 1;
+			}
+		}
+	}
+	
+	int max_len = *max_element(len.begin(),len.end());
+	cout << max_len;
+	
+	return 0;
+}
