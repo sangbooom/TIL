@@ -28,3 +28,4 @@
 
 ### 참고해보기
 - [리액트 관련 질문 및 답변](https://velog.io/@sgyos000/React-%EA%B4%80%EB%A0%A8-%EC%A7%88%EB%AC%B8-%EB%B0%8F-%EB%8B%B5%EB%B3%80)
+- [v-dom 설명 잘되어있음](https://github.com/kyu9341/TIL/blob/main/React/virtualDOM.md)
