@@ -1,27 +1,16 @@
-#include <iostream>
-#include <algorithm>
-
+#include <bits/stdc++.h>
 using namespace std;
-int d[1000000];
-
-int calc(int n){
-	d[1] = 0;
-	for(int i=2; i<=n; i++){
-		d[i] = d[i-1] + 1;
-		if(i%2==0){
-			d[i] = min(d[i], d[i/2] + 1);
-		}
-		if(i%3==0){
-			d[i] = min(d[i], d[i/3] + 1);
-		}
-	}
-	return d[n];
-}
-
+int D[1000001];
 int main(){
-	int n;
-	cin >> n;
-	cout << calc(n);
+	int N;
+	cin >> N;
+	D[0] = 0;
+	for(int i=2;i<=N;i++){
+		D[i] = D[i-1] + 1;
+		if(i%2==0) D[i] = min(D[i], D[i/2]+1); 
+		if(i%3==0) D[i] = min(D[i], D[i/3]+1);
+	}
+	cout << D[N];
 	
 	return 0;
 }

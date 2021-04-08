@@ -1,19 +1,17 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
-
+int dp[1001];
 int main(){
 	int n;
 	cin >> n;
-	int d[n];
 	
-	d[1] = 1;
-	d[2] = 2;
-	
+	dp[1] = 1;
+	dp[2] = 2;
+	dp[3] = 3;
 	for(int i=3; i<=n; i++){
-		d[i] = ( d[i-1] + d[i-2] ) % 10007;
+		dp[i] = (dp[i-1] + dp[i-2]) % 10007;
 	}
-	
-	cout << d[n];
+	cout << dp[n];
 	
 	return 0;
 }

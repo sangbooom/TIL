@@ -5,13 +5,13 @@ int N,M;
 int arr[10];
 int visited[10];
 
-int backTracking(int k){
+void backTracking(int k){
 	if(k==M){
 		for(int i=0; i<M; i++){
 			cout << arr[i] << " ";
 		}
 		cout << "\n";
-		return 0;
+		return;
 	} else {
 		for(int i=1; i<=N; i++){
 			if(!visited[i]){
@@ -25,10 +25,11 @@ int backTracking(int k){
 }
 
 int main(){
+	ios::sync_with_stdio(0);
+  	cin.tie(0);
 	cin >> N >> M;
-	
 	backTracking(0);
-	
+
 	return 0;
 }
 
