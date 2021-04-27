@@ -88,6 +88,39 @@ setTimeout(function() {
 console.log('Hello Again');
 ```
 
+## 콜백함수가 무엇이고 왜 사용하지?
+- 간단히 말하자면, **자바스크립트의 비동기 처리 방식의 문제점을 해결해주기 위해  특정 시점에서 호출이 되도록 사용하는 함수**이다.
+AJAX통신을 할 때 예를 들어보면, 통신을 하고 받아온 데이터를 가지고 실행이 되어야 하는 test함수가 있다고 가정해보자.
+```js
+function getData(){
+    //AJAX 통신
+}
+
+function test(){
+    console.log("test");
+}
+
+getData();
+test();
+```
+실행결과는 test가 콘솔에 먼저 찍혀 있을 것이다.
+자바스크립트는 비동기 처리 특성 때문에 getData()에서 AJAX 통신이 끝날 때까지 기다려 주지 않는다.
+
+```js
+function getData(callback) {
+    setTimeout(() => {
+        //AJAX 통신
+        callback();
+    },3000)
+}
+
+function test(){
+    console.log("test");
+}
+
+getData(test);
+```
+이렇게 하면 콜백함수를 매개변수로 보내서 AJAX통신을 성공하고 실행하라고 해주면 개발자가 원하는 순차대로 코드가 진행 될 것이다.
 ## 콜백함수로 비동기 처리 방식의 문제점 해결하기
 
 ```jsx
