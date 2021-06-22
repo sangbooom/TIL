@@ -57,7 +57,7 @@
 
 <br>
 
-## 연습
+# 연습
 ### 전화번호
 
 ![image](https://user-images.githubusercontent.com/43921054/109906018-0fd57580-7ce3-11eb-8efd-19e5df13c6ff.png)
@@ -70,5 +70,34 @@
 
 <br>
 
+### 괄호 안의 문자열 추출 
+![image](https://user-images.githubusercontent.com/43921054/122645809-3961c200-d157-11eb-8a2f-b8be9c401401.png)
+
+기본적으로 탐욕적(Greedy) 방식으로 동작하는데, ?문자를 해당 메타 문자 뒤에 붙이면 게으른(Lazy) 방식으로 동작한다고한다.   
+*?가 다르게 동작한다는 것을 유념해두자
+
+~~괄호는 찾되 정규식에 포함안하는 기능은 없나보다. 그 후에 split으로 처리했다~~  **6/20수정**
+### 위 문제 해결한 방법
+![image](https://user-images.githubusercontent.com/43921054/122647011-24882d00-d15d-11eb-9f8d-a05695448f3c.png)
+![image](https://user-images.githubusercontent.com/43921054/122647064-58635280-d15d-11eb-8878-b3cc5fbf632a.png)
+**전방탐색은 모든 브라우저에서 전방탐색을 지원하지 않는다고 한다.**
+> 참고: [전방탐색, 후방탐색](https://medium.com/@originerd/%EC%A0%95%EA%B7%9C%ED%91%9C%ED%98%84%EC%8B%9D-%EC%A2%80-%EB%8D%94-%EA%B9%8A%EC%9D%B4-%EC%95%8C%EC%95%84%EB%B3%B4%EA%B8%B0-5bd16027e1e0)
+
 ## 활용하기
 ![image](https://user-images.githubusercontent.com/43921054/109906495-f3860880-7ce3-11eb-935f-239a44d3170c.png)
+
+---
+
+![image](https://user-images.githubusercontent.com/43921054/122645862-82b21180-d157-11eb-9b61-668a12b96551.png)
+
+---
+
+![image](https://user-images.githubusercontent.com/43921054/122647285-74b3bf00-d15e-11eb-884a-f94accda8a7d.png)   
+
+위와 다르게 훨씬 쉬워졌다.
+
+# 정규식의 중요성
+
+> 정규식이 신입공채 웹개발포지션 코딩테스트에 종종 등장한다. 그때마다 split으로 하드코딩 할 순 없으니 기능을 다 익혀두고 참고서 보면서 바로 적용할 수 있도록 하자.
+
+> 참고 : [정규표현식 설명](https://curryyou.tistory.com/234) 
