@@ -7,26 +7,28 @@ function solution(cacheSize, cities) {
     while(cities.length != 0){
         continueFlag = false;
         let target = cities.shift();
+        if(cacheSize == 0){
+            answer += 5;
+            continue;
+        }
         for(let i=0; i<cache.length; i++){
-            if(cache[i].city.toLowerCase() == target.toLowerCase()){
+            if(cache[i].toLowerCase() == target.toLowerCase()){
+                cache.splice(i,1);
+                cache.push(target);
                 answer += 1;
                 continueFlag = true;
+                break;
             }
         }
         if(continueFlag){
             continue;
         }
-        if(cacheSize == cache.length && cacheSize > 0){
-            let minIndex = Math.min(...cache.map(v => v.index))
-            for(let i=0; i<cache.length; i++){
-                if(cache[i].index === minIndex){
-                    let targetIndex = cache.findIndex(v => v.index === cache[i].index);
-                    cache.splice(targetIndex,1,{city: target, index: cacheCount++});
-                    answer += 5;
-                }
-            }
+        if(cacheSize == cache.length && cacheSize != 0){
+            cache.shift();
+            cache.push(target);
+            answer += 5;
         } else {
-            cache.push({city: target, index: cacheCount++});
+            cache.push(target);
             answer += 5;
         }
     }
