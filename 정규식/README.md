@@ -2,7 +2,7 @@
 
 - 참고: https://youtu.be/t3M6toIflyQ
 
-- 연습용 사이트: https://regexr.com/5ml92   
+- 연습용 사이트: https://regexr.com/69viq   
    
 <br>
    
