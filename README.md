@@ -5,8 +5,7 @@
 - [x] 자바스크립트 완벽가이드 마무리!
 - [x] 자바스크립트 완벽가이드 1장부터 다시!
 - [x] 무드픽 앱 배포 끝내기
-- [ ] 블로그 포스팅
-- [ ] next/image 삽질기, pwa 적용기, react-native ios, android 개발자 계정 및 앱 등록 velog 포스팅하기
+- [ ] next/image 삽질기, pwa 적용기, react-native ios, android 개발자 계정 및 앱 등록, 깃헙 액션 적용기, 자바스크립트 스터디 하면서 깨달은부분 블로그 포스팅하기
 - [ ] [프로그래머스 과제테스트 못풀었던거 하기](https://programmers.co.kr/skill_check_assignments/298)
 
 # 10월 목표
