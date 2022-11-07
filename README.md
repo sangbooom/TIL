@@ -1,6 +1,3 @@
-### 추석 목표
-- ~인프런 http 김영한님 강의 듣기~
-
 # 11월 목표
 - [ ] 넥스터즈 신청
 - [ ] 모던 자바스크립트 deepdive 책 꾸준히 읽기
@@ -16,6 +13,7 @@
 - [ ] next/image 삽질기, pwa 적용기, react-native ios, android 개발자 계정 및 앱 등록, 깃헙 액션 적용기 블로그 포스팅하기 (월마다 하나씩은 하기)
 - [ ] 2022년 회고록 포스팅하기
 
+
 ## next step
-- [ ] 이펙티브 타입스크립트 책 읽기 ( https://www.youtube.com/watch?v=O4-8lQOZ2Tg )
+- [ ] 이펙티브 타입스크립트 책 읽기 ( 참고 : https://www.youtube.com/watch?v=O4-8lQOZ2Tg , https://devowen.com/426 )
 - [ ] 자바스크립트 deepdive 스터디 완료 후 이펙티브 타입스크립트 스터디까지??
