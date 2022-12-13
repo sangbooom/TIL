@@ -10,7 +10,7 @@
 - [x] 자바스크립트 완벽가이드 두번 읽기
 - [ ] next/image 삽질기, pwa 적용기, react-native ios, android 개발자 계정 및 앱 등록, 깃헙 액션 적용기 블로그 포스팅하기 (월마다 하나씩은 하기)
 
-
-## next step
+## 2023년 목표
+- [ ] 백엔드 공부하기 (nest? graphql?)
+- [ ] 서버, DB, 인프라 개념 공부 (도커, 아파치, nginx, 웹서버, was, 로드밸런싱, 프록시 등등..)
 - [ ] 이펙티브 타입스크립트 책 읽기 ( 참고 : https://www.youtube.com/watch?v=O4-8lQOZ2Tg , https://devowen.com/426 )
-- [ ] 자바스크립트 deepdive 스터디 완료 후 이펙티브 타입스크립트 스터디까지??
