@@ -18,3 +18,6 @@
 - 1월 19~20일 워크샵
 - 1월 21일 ditto ERD 작성 (https://dbdiagram.io/d/63c5497b296d97641d79f1ee)
 - 1월 22일 ~ 23일 데이터 prefetch를 통해 seo 봇이 유의미한 데이터를 읽을 수 있도록 페이지 개선작업 진행 (회사), @next/font 적용기 블로그 포스팅
+
+## 2023년 2월 목표
+- [ ] gsp => gssp 이주기, pre-rendering으로 인한 gssp 속도개선? 블로깅
