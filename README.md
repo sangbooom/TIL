@@ -18,5 +18,7 @@
 
 ### TODO
 - [ ] pre-rendering으로 인한 gssp 속도개선에 대한 고찰 블로그 작성 (작성중)
+- [x] gssp에 대해 정리 블로그 작성
 - [ ] 이사하기 (7월 9일 전에), (보증금지원형 장기안심주택 신청 완료)
 - [x] rangeSlider mouseDown 이슈로 input type=range 사용하여 해결한 내용 블로깅
+- [ ] drag&drop codesandbox 작성
