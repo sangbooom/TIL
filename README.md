@@ -2,7 +2,7 @@
 ## 2023년 목표
 - [ ] 블로그 꾸준히 포스팅하기....
   - [x] vercel ai sdk 관련 블로그 포스팅
-  - [ ] getServerSideProps 콜드스타트 관련 내용 보충
+  - [x] getServerSideProps 관련 고민했던 내용 정리
   - [ ] 번들사이즈 최적화 관련 포스팅, 후속으로 chunkLoadError, vercel random build id 문제에 대해서 포스팅
 - [ ] 백엔드 개념 공부하기 (nest? graphql?), 간단한 강의 찾아서 사이드플젝?
 - [ ] 서버, DB(no sql말고 rdb erd 짜기..), 인프라 개념 공부 (도커, 아파치, nginx, 웹서버, was, 로드밸런싱, 프록시 등등..)
