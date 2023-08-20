@@ -5,6 +5,7 @@
   - [x] getServerSideProps 관련 고민했던 내용 정리
   - [ ] 번들사이즈 최적화 관련 포스팅, 후속으로 chunkLoadError, vercel random build id 문제에 대해서 포스팅
 - [ ] 백엔드 개념 공부하기 (nest? graphql?), 간단한 강의 찾아서 사이드플젝?
+- [ ] [nestjs 인프런 강의 듣기](https://www.inflearn.com/course/%EB%94%B0%EB%9D%BC%ED%95%98%EB%8A%94-%EB%84%A4%EC%8A%A4%ED%8A%B8-%EC%A0%9C%EC%9D%B4%EC%97%90%EC%8A%A4/dashboard)
 - [ ] 서버, DB(no sql말고 rdb erd 짜기..), 인프라 개념 공부 (도커, 아파치, nginx, 웹서버, was, 로드밸런싱, 프록시 등등..)
 
 
@@ -18,7 +19,5 @@
 
 ### 책 읽기
 - 목표: 개발서적 이외에 책 두권 읽기
-  - 도둑맞은 집중력
-  - 나를 지키는 관계가 먼저입니다 
   - 이펙티브 타입스크립트 책 읽기 ( 참고 : https://www.youtube.com/watch?v=O4-8lQOZ2Tg , https://devowen.com/426 )
   - 한권으로 읽는 IT 인프라 구조 책 읽기
